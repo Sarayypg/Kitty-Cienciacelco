@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Kitty pagina del saber</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+     
+
+        <div class="container-fluid nav-bar p-0">
+  <nav class="navbar navbar-expand-lg justify-content-center">
+    <div class="menu-box d-flex align-items-center px-5 py-2 shadow rounded-pill">
+      <!-- Logo + Texto -->
+       
+      <a href="index.html" class="navbar-brand d-flex align-items-center me-4">
+        <img src="img/menukitty-removebg-preview.png" alt="Kitty Ciencias" style="height:40px; width:auto; margin-right:8px;">
+      </a>
+      <ul class="navbar-nav d-flex flex-row">
+        <li class="nav-item mx-3">
+          <a href="index.html" class="nav-link">Inicio</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="Todo.html" class="nav-link">Temas</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="service.html" class="nav-link">Actividades</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="product.html" class="nav-link">Material de apoyo</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="fondo">
+    <div class="jumbotron jumbotron-fluid page-header" style="margin-bottom: 90px;">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-3 mt-lg-5">Fotosíntesis</h1>
+            <h2 class="text-white mt-4">Un mundo de organismos</h2>
+        </div>
+    </div>
+</div>
+    <!-- Navbar End -->
+ <!-- Carta La célula -->
+  <h1 class="font-weight-bold mb-3">Todo sobre la Fotosíntesis<h1>
+  <div class="panel">
+    <div class="icono" onclick="mostrarInfo('sol')">
+      <img src="img/sol-removebg-preview.png" alt="Sol">
+    </div>
+
+    <div class="icono" onclick="mostrarInfo('agua')">
+      <img src="img/gota-removebg-preview.png" alt="Agua">
+    </div>
+
+    <div class="icono" onclick="mostrarInfo('co2')">
+      <img src="img/aire-removebg-preview.png" alt="CO2">
+    </div>
+
+    <div class="icono" onclick="mostrarInfo('planta')">
+      <img src="img/aireee.png" alt="Planta">
+    </div>
+  </div>
+
+  <div id="info" class="info"></div>
+
+  <footer>
+    <p> La fotosíntesis transforma la energía solar en vida <p>
+  </footer>
+    
+  </div>
+    <!-- Tarjetas abajo -->
+   
+           
+      <script>
+   const info = document.getElementById("info");
+
+function mostrarInfo(tipo) {
+  let titulo, texto, imagen;
+
+  if (tipo === 'sol') {
+    titulo = " Energía del Sol";
+    texto = "La luz solar activa los cloroplastos de las hojas, que capturan su energía para comenzar el proceso.";
+    imagen = "img/energiasolar.png"; 
+  } else if (tipo === 'agua') {
+    titulo = " El Agua";
+    texto = "El agua absorbida por las raíces viaja hasta las hojas. Allí, se divide liberando oxígeno y electrones.";
+    imagen = "img/aguafoto.png" ; 
+  } else if (tipo === 'co2') {
+    titulo = "Dióxido de Carbono (CO₂)";
+    texto = "El CO₂ del aire entra por los estomas y se combina con la energía solar para formar glucosa.";
+    imagen = "img/airefoto.png";
+  } else {
+    titulo = "Resultado Final";
+    texto = "La planta crea glucosa para alimentarse y libera oxígeno, manteniendo el equilibrio del planeta.";
+    imagen = "img/resultadofoto.png";
+  }
+
+  info.innerHTML = `
+    <h2>${titulo}</h2>
+    <p>${texto}</p>
+    <img src="${imagen}" alt="${titulo}">
+  `;
+  info.classList.add('visible');
+}
+
+// 🌿 Burbujas decorativas
+function crearBurbuja() {
+  const burbuja = document.createElement('div');
+  burbuja.classList.add('burbuja');
+  burbuja.style.left = Math.random() * 100 + '%';
+  burbuja.style.width = burbuja.style.height = 10 + Math.random() * 25 + 'px';
+  burbuja.style.animationDuration = 6 + Math.random() * 5 + 's';
+  document.body.appendChild(burbuja);
+  setTimeout(() => burbuja.remove(), 12000);
+}
+setInterval(crearBurbuja, 600);
+
+  </script>
+                
+                 
+    <!-- Products End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer bg-light py-5" style="margin-top: 90px;">
+        <div class="container text-center py-5">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <a href="index.html" class="navbar-brand m-0">
+                        <h1 class="m-0 mt-n2  text-primary"><span class="text-secondary">K</span>itty ciencia♥</h1>
+                    </a>
+                </div>
+                <div class="col-12 mb-4">
+
+                    <a class="btn btn-outline-secondary btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="col-12 mt-2 mb-4">
+                    <div class="row">
+                        <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
+                            <h5 class="font-weight-bold mb-2">Sobre nosotros</h5>
+                            <p class="mb-2">Colegio Celco Sogamoso</p>
+                            <p class="mb-0">+57 3184256005</p>
+                        </div>
+                        <div class="col-sm-6 text-center text-sm-left">
+                            <h5 class="font-weight-bold mb-2">Contactanos</h5>
+                            <p class="mb-2">kittyciencias@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <p class="m-0">&copy; <a href="#">Domain</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
